@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Test React</title>
+
+<!-- Load React API -->
+<script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+
+<!-- Load React DOM-->
+<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+<!-- Load Babel Compiler -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<body>
+	<div id="root">Hello World!</div>
+	<!--
+
+	REACT COMPONENTS
+	React components are JavaScript functions.
+
+	This example creates a React component named "Welcome":
+
+	Example
+	function Welcome() {
+		return <h1>Hello React!</h1>;
+	}
+	ReactDOM.render(<Welcome />, document.getElementById('root'));
+
+	-->
+
+
+	<script type="text/babel">
+
+	function doTextChange()
+	{
+		const element = <h1>Hey now!!</h1>;
+		ReactDOM.render(element, document.getElementById('root'));
+	}
+
+
+
+	function doTextChangeProps()
+	{
+		function Welcome(props)
+		{
+			return <h1>Hello {props.name}!</h1>;
+
+
+		}
+
+		ReactDOM.render(<Welcome name="Kevin"/>, document.getElementById('root'));
+	}
+
+	</script>	
+
+	<button onclick="doTextChange();">click me!!!</button>
+
+
+</body>
+</html>
